@@ -17,12 +17,12 @@ describe Product, type: :model do
     end
 
     it "is not valid without a value" do
-      subject.value = nil
+      subject.price = nil
       expect(subject).to_not be_valid
     end
 
     it "is not valid without a timestamp" do
-      subject.timestamp = nil
+      subject.product_code = nil
       expect(subject).to_not be_valid
     end
   end

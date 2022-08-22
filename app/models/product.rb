@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Products Model
+# Product Model
 class Product < ApplicationRecord
 
-  #ID Product_code, Name, Price
-  belongs_to :cart
   validates :name, :price, :product_code, presence: true
+  SR1_DISCOUNT_PRICE = 4.50
 end
