@@ -29,14 +29,14 @@ module Supermarket
 
     def add_to_cart(item)
       product = Product.find_by(product_code: item[:product_code])
-      find_or_create_card_item(product)
+      find_or_create_cart_item(product)
     end
 
     def print_details
       cart.cart_item.map { |ct| [ct.product.name, ct.quantity]}
     end
 
-    def find_or_create_card_item(product)
+    def find_or_create_cart_item(product)
       cart_item = cart.cart_item.find_by(product_id: product.id)
       if cart_item.present?
         quantity = cart_item.quantity

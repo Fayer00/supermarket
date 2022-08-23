@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe Supermarket::Checkout do
-  context 'when invalid cart' do
+  context 'invalid cart' do
       let(:checkout) {Supermarket::Checkout.new(cart_id: 9999) }
       let(:product) { create(:product) }
 
